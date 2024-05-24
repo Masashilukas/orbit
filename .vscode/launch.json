@@ -1,0 +1,85 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "J-Link (internal)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "build/orbiteProgramEdit.elf",
+            "servertype": "jlink",
+            "device": "STM32G431CB",
+            "preLaunchCommands": [
+                "set mem inaccessible-by-default off",
+            ],
+
+            "preRestartCommands": [
+                "monitor reset 0"
+            ],
+            
+            "preLaunchTask": "Build", // Set this to run a task from tasks.json before starting a debug session
+            "showDevDebugOutput":"none",// Shows output of GDB, helpful when something is not working right
+            "rttConfig": {
+                "enabled": true,
+                "address": "auto",
+                "decoders": [
+                    {
+                        "port": 0,
+                        "timestamp": true,
+                        "type": "console"
+                    }
+                ]
+            },
+        
+        },
+        {
+            "name": "J-Link (external)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "build/MiraRx.elf",
+            "servertype": "external",
+            "gdbTarget": "localhost:2331",
+            "preLaunchCommands": [
+                "set mem inaccessible-by-default off",
+                "monitor reset 0"
+            ],
+            "postLaunchCommands": [
+                "monitor reset",
+            ],
+            "preRestartCommands": [
+                "monitor reset 0"
+            ],
+            "svdFile": "STM32F446.svd",
+            "preLaunchTask": "Build", // Set this to run a task from tasks.json before starting a debug session
+            "showDevDebugOutput":"none",// Shows output of GDB, helpful when something is not working right
+        },
+        {
+            "name": "pyOCD",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "build/MiraRx.elf",
+            "servertype": "pyocd",
+            "targetId": "STM32F411ME", 
+            "gdbTarget": "localhost:5555",
+            "svdFile": "STM32F446.svd",
+            "preLaunchTask": "Build", // Set this to run a task from tasks.json before starting a debug session
+            "showDevDebugOutput":"none",// Shows output of GDB, helpful when something is not working right
+        },
+        {
+            "name": "pyOCD (external)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "build/MiraRx.elf",
+            "servertype": "external",
+            "serverpath": "localhost:3333",
+            "targetId": "ATSAMG55J19", 
+            "gdbTarget": "localhost:5555",
+            "svdFile": "STM32F446.svd",
+            "preLaunchTask": "Build", // Set this to run a task from tasks.json before starting a debug session
+            "showDevDebugOutput":"none",// Shows output of GDB, helpful when something is not working right
+        }
+    ]
+}

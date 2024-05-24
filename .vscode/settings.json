@@ -1,0 +1,10 @@
+{
+    "workbench.colorCustomizations": {
+        "[Search Lights]": {},
+        "activityBar.background": "#03224b",
+        "titleBar.activeBackground": "#083a97",
+        "titleBar.activeForeground": "#FFFAF7"
+    },
+    "cmake.configureOnOpen": false,
+    "cortex-debug.variableUseNaturalFormat": true
+}

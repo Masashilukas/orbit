@@ -46,4 +46,8 @@ void MOTOR_task(motor_t* m);
 void MOTOR_FOCtask(motor_t* m);
 float MOTOR_getCurrent(motor_t* m);
 void readHalls(motor_t* m);
+void MOTOR_SVPWMtask(motor_t* m);
 void _adcHandler(motor_t* m);
+void _adcSelV(motor_t* m);
+void _adcSelW(motor_t* m);
+void _adcSelU(motor_t* m);

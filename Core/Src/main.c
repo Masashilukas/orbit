@@ -373,13 +373,13 @@ int main(void)
   motor.enablePins[1] = enb;
   motor.enablePins[2] = enc;
   motor.motorSleep = motor_Sleep;
-  motor.hallPins[0] = Hall_3;
+  motor.hallPins[0] = Hall_1;
   motor.hallPins[1] = Hall_2;
-  motor.hallPins[2] = Hall_1;
+  motor.hallPins[2] = Hall_3;
   motor.dir = 1;        // make go forward
   motor.dutyCycle = 0.2;
   MOTOR_init(&motor);
-  HAL_GPIO_WritePin(motor_Sleep.gpioGroup, motor_Sleep.gpioPin, 0); // turn motor on
+  HAL_GPIO_WritePin(motor_Sleep.gpioGroup, motor_Sleep.gpioPin, 1); // turn motor on
 
   uint8_t dataSend = 0b11001000;
   /* USER CODE END 2 */
@@ -397,13 +397,14 @@ int main(void)
 	  //HAL_GPIO_WritePin(ena.gpioGroup, ena.gpioPin, 1); // turn motor on
 	  //HAL_GPIO_WritePin(enb.gpioGroup, enb.gpioPin, 0); // turn motor on
 	  //HAL_GPIO_WritePin(enc.gpioGroup, enc.gpioPin, 0); // turn motor on
-	  MOTOR_FOCtask(&motor);
+	  //MOTOR_FOCtask(&motor);
+    MOTOR_SVPWMtask(&motor);
 	  //MOTOR_task(&motor);
 	  //HAL_Delay(1);
 
-	  HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 1); // setting txen highW
-	  HAL_UART_Transmit(&huart3, isDA, 4, 100);
-	  HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 0); // setting txen low
+	  //HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 1); // setting txen highW
+	  //HAL_UART_Transmit(&huart3, isDA, 4, 100);
+	  //HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 0); // setting txen low
 	  //HAL_Delay(1);
 
   }
