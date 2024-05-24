@@ -29,9 +29,11 @@ typedef struct {
     float ivDat;
     float iwDat;
     int adcSamples;
+    int hallCount;
     float offset[3];
     float dutyCycle;
     float accumulatedCurrent;
+    float hallspeed;
     float averageCurrent;
     bool driveStateChanged;
     int calibrationCount;

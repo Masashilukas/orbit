@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     (#) Declare a UART_HandleTypeDef handle structure.
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     (#) For the UART RS485 Driver Enable mode, initialize the UART registers
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 2
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 2
 
 
   31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****         by calling the HAL_RS485Ex_Init() API.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** /** @defgroup UARTEx_Exported_Functions  UARTEx Exported Functions
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   * @{
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   */
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 3
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 3
 
 
   88:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  142:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     +-----------------------------------------------------------------------+
  143:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   * @{
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 4
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 4
 
 
  145:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  199:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     }
  200:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  201:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     /* Init the low level hardware */
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 5
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 5
 
 
  202:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     huart->MspInitCallback(huart);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  256:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     This subsection provides a set of Wakeup and FIFO mode related callback functions.
  257:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  258:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     (#) Wakeup from Stop mode Callback:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 6
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 6
 
 
  259:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****         (+) HAL_UARTEx_WakeupCallback()
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  313:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  314:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** /**
  315:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   * @}
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 7
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 7
 
 
  316:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  370:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****         (+) HAL_UARTEx_ReceiveToIdle_DMA()
  371:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  372:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** @endverbatim
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 8
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 8
 
 
  373:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   * @{
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  427:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_StopModeWakeUpSourceConfig(UART_HandleTypeDef *huart, UART_WakeUpTypeD
  428:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** {
  429:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 9
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 9
 
 
  430:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   uint32_t tickstart;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  484:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   /* Process Locked */
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   __HAL_LOCK(huart);
  486:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 10
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 10
 
 
  487:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   /* Set UESM bit */
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  541:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  542:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   /* Restore UART configuration */
  543:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   WRITE_REG(huart->Instance->CR1, tmpcr1);
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 11
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 11
 
 
  544:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  598:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *          This parameter can be one of the following values:
  599:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *            @arg @ref UART_TXFIFO_THRESHOLD_1_8
  600:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *            @arg @ref UART_TXFIFO_THRESHOLD_1_4
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 12
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 12
 
 
  601:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *            @arg @ref UART_TXFIFO_THRESHOLD_1_2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  655:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   */
  656:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_SetRxFifoThreshold(UART_HandleTypeDef *huart, uint32_t Threshold)
  657:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** {
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 13
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 13
 
 
  658:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   uint32_t tmpcr1;
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  712:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   */
  713:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size
  714:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****                                            uint32_t Timeout)
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 14
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 14
 
 
  715:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  769:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****         /* If Set, and data has already been received, this means Idle Event is valid : End recepti
  770:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****         if (*RxLen > 0U)
  771:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****         {
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 15
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 15
 
 
  772:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****           huart->RxEventType = HAL_UART_RXEVENT_IDLE;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  826:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *        to UART interrupts raised by RXNE and IDLE events. Callback is called at end of receptio
  827:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *        number of received data elements.
  828:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   * @note  When UART parity is not enabled (PCE = 0), and Word Length is configured to 9 bits (M1-M
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 16
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 16
 
 
  829:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *        the received data is handled as a set of uint16_t. In this case, Size must indicate the 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  883:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   * @note  When the UART parity is enabled (PCE = 1), the received data contain
  884:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *        the parity bit (MSB position).
  885:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   * @note  When UART parity is not enabled (PCE = 0), and Word Length is configured to 9 bits (M1-M
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 17
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 17
 
 
  886:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *        the received data is handled as a set of uint16_t. In this case, Size must indicate the 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  940:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *        of reception process is provided to application through calls of Rx Event callback (eith
  941:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *        HAL_UARTEx_RxEventCallback() or user registered one). As several types of events could o
  942:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *        Half Transfer, or Transfer Complete), this function allows to retrieve the Rx Event type
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 18
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 18
 
 
  943:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   *        to Rx Event callback execution.
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
   39 0004 03E90600 		stmdb	r3, {r1, r2}
  987:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   assert_param(IS_UART_ADDRESSLENGTH_DETECT(WakeUpSelection.AddressLength));
   40              		.loc 1 987 3 is_stmt 1 view .LVU2
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 19
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 19
 
 
  988:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
   79              		.loc 1 1005 3 view .LVU7
 1006:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   uint8_t tx_fifo_depth;
   80              		.loc 1 1006 3 view .LVU8
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 20
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 20
 
 
 1007:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   uint8_t rx_fifo_threshold;
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  118              		.loc 1 1022 23 view .LVU28
  119 001c 490F     		lsrs	r1, r1, #29
  120              	.LVL4:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 21
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 21
 
 
 1023:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     huart->NbTxDataToProcess = ((uint16_t)tx_fifo_depth * numerator[tx_fifo_threshold]) /
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  166              		.thumb
  167              		.thumb_func
  168              		.fpu fpv4-sp-d16
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 22
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 22
 
 
  170              	HAL_RS485Ex_Init:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  210 0014 2423     		movs	r3, #36
  211 0016 C4F88830 		str	r3, [r4, #136]
  212:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 23
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 23
 
 
  212              		.loc 1 212 3 is_stmt 1 view .LVU56
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  236:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  253              		.loc 1 236 3 is_stmt 1 view .LVU70
  254 004e 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 24
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 24
 
 
  255 0050 1A68     		ldr	r2, [r3]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  299              		.loc 1 174 12 is_stmt 0 view .LVU80
  300 0082 0120     		movs	r0, #1
  301              	.LVL20:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 25
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 25
 
 
  243:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  354              		.syntax unified
  355              		.thumb
  356              		.thumb_func
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 26
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 26
 
 
  357              		.fpu fpv4-sp-d16
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  403              		.loc 1 403 3 is_stmt 1 view .LVU98
  404 000c 0068     		ldr	r0, [r0]
  405              	.LVL25:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 27
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 27
 
 
  403:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  453              	.LVL30:
  454              	.LFB334:
  428:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 28
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 28
 
 
  455              		.loc 1 428 1 is_stmt 1 view -0
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  496 002c 8B68     		ldr	r3, [r1, #8]
  497 002e 23F44013 		bic	r3, r3, #3145728
  498 0032 029A     		ldr	r2, [sp, #8]
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 29
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 29
 
 
  499 0034 1343     		orrs	r3, r3, r2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  541              	.LVL38:
  450:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****   }
  542              		.loc 1 450 5 is_stmt 0 view .LVU134
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 30
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 30
 
 
  543 0070 E3E7     		b	.L34
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  590              		@ frame_needed = 0, uses_anonymous_args = 0
  591              		@ link register save eliminated.
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 31
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 31
 
 
  592              		.loc 1 485 3 view .LVU144
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
   28:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
   29:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
   30:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 32
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 32
 
 
   31:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
   85:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   86:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
   87:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 33
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 33
 
 
   88:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  142:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t* dest;
  143:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t  wlen;
  144:Drivers/CMSIS/Include/cmsis_gcc.h ****   } __zero_table_t;
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 34
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 34
 
 
  145:Drivers/CMSIS/Include/cmsis_gcc.h ****   
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  199:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  200:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  201:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 35
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 35
 
 
  202:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  256:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register (non-secure)
  257:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Writes the given value to the non-secure Control Register when in secure state.
  258:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    control  Control Register value to set
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 36
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 36
 
 
  259:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  313:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  314:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PSP(void)
  315:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 37
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 37
 
 
  316:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  370:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  371:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  372:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp" : "=r" (result) );
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 38
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 38
 
 
  373:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  427:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, sp_ns" : "=r" (result) );
  428:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  429:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 39
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 39
 
 
  430:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  484:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  485:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
  486:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 40
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 40
 
 
  487:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Priority Mask (non-secure)
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  541:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Base Priority register value
  542:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  543:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_BASEPRI_NS(void)
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 41
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 41
 
 
  544:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  598:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, faultmask" : "=r" (result) );
  599:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  600:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 42
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 42
 
 
  601:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  655:Drivers/CMSIS/Include/cmsis_gcc.h ****   
  656:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer Limit (PSPLIM).
  657:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSPLIM Register value
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 43
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 43
 
 
  658:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  712:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  713:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  714:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 44
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 44
 
 
  715:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  769:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSPLIM_NS(void)
  770:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  771:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)))
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 45
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 45
 
 
  772:Drivers/CMSIS/Include/cmsis_gcc.h ****   // without main extensions, the non-secure MSPLIM is RAZ/WI
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  826:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  827:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  828:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 46
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 46
 
 
  829:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get FPSCR
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  883:Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
  884:Drivers/CMSIS/Include/cmsis_gcc.h **** */
  885:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 47
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 47
 
 
  886:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Define macros for porting to both thumb1 and thumb2.
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  940:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Data Synchronization Barrier
  941:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Acts as a special kind of Data Memory Barrier.
  942:Drivers/CMSIS/Include/cmsis_gcc.h ****            It completes when all explicit memory accesses before this instruction complete.
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 48
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 48
 
 
  943:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  997:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order in a 16-bit value and returns the signed 16-bit result. For exam
  998:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  Value to reverse
  999:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 49
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 49
 
 
 1000:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
 1054:Drivers/CMSIS/Include/cmsis_gcc.h ****      (defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1))    )
 1055:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("rbit %0, %1" : "=r" (result) : "r" (value) );
 1056:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 50
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 50
 
 
 1057:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t s = (4U /*sizeof(v)*/ * 8U) - 1U; /* extra shift needed at end */
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
 1111:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
 1112:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrexb %0, %1" : "=r" (result) : "Q" (*addr) );
 1113:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 51
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 51
 
 
 1114:Drivers/CMSIS/Include/cmsis_gcc.h ****     /* Prior to GCC 4.8, "Q" will be expanded to [rx, #0] which is not
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  623              		.thumb
  624              		.syntax unified
  625              	.LBE24:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 52
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 52
 
 
  626              	.LBE23:
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
 1202:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __STREXW(uint32_t value, volatile uint32_t *addr)
  633              		.loc 2 1202 31 discriminator 1 view .LVU159
  634              	.LBB26:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 53
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 53
 
 
 1203:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  673              		.cfi_endproc
  674              	.LFE335:
  676              		.section	.text.HAL_UARTEx_DisableStopMode,"ax",%progbits
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 54
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 54
 
 
  677              		.align	1
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
 1156:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  720              		.loc 2 1156 4 discriminator 1 view .LVU187
 1156:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 55
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 55
 
 
  721              		.loc 2 1156 4 is_stmt 0 discriminator 1 view .LVU188
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  762              	.LVL58:
  512:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** }
  763              		.loc 1 512 10 discriminator 2 view .LVU204
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 56
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 56
 
 
  764 0028 7047     		bx	lr
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  530:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  809              		.loc 1 530 17 is_stmt 0 discriminator 2 view .LVU216
  810 0012 2423     		movs	r3, #36
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 57
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 57
 
 
  811 0014 C0F88830 		str	r3, [r0, #136]
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  849              	.LCFI13:
  850              		.cfi_def_cfa_offset 0
  851              		.cfi_restore 4
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 58
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 58
 
 
  852              		.cfi_restore 14
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  574:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  895              		.loc 1 574 10 discriminator 2 view .LVU246
  896 0016 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 59
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 59
 
 
  897              	.LVL68:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  935 003c 7047     		bx	lr
  936              		.cfi_endproc
  937              	.LFE338:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 60
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 60
 
 
  939              		.section	.text.HAL_UARTEx_SetTxFifoThreshold,"ax",%progbits
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  981 0018 0368     		ldr	r3, [r0]
  621:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  982              		.loc 1 621 10 discriminator 2 view .LVU276
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 61
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 61
 
 
  983 001a 1D68     		ldr	r5, [r3]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1023 0048 FCE7     		b	.L59
  1024              		.cfi_endproc
  1025              	.LFE339:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 62
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 62
 
 
  1027              		.section	.text.HAL_UARTEx_SetRxFifoThreshold,"ax",%progbits
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1069 0018 0368     		ldr	r3, [r0]
  670:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  1070              		.loc 1 670 10 discriminator 2 view .LVU304
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 63
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 63
 
 
  1071 001a 1D68     		ldr	r5, [r3]
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1111 0048 FCE7     		b	.L63
  1112              		.cfi_endproc
  1113              	.LFE340:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 64
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 64
 
 
  1115              		.section	.text.HAL_UARTEx_ReceiveToIdle,"ax",%progbits
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1159              		.loc 1 724 8 is_stmt 0 view .LVU329
  1160 0018 0029     		cmp	r1, #0
  1161 001a 00F0A080 		beq	.L85
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 65
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 65
 
 
  724:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     {
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1198              		.loc 1 738 5 is_stmt 1 view .LVU347
  738:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  1199              		.loc 1 738 24 is_stmt 0 view .LVU348
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 66
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 66
 
 
  1200 0040 A4F85E90 		strh	r9, [r4, #94]	@ movhi
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  742:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  1242              		.loc 1 742 5 discriminator 13 view .LVU361
  742:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 67
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 67
 
 
  1243              		.loc 1 742 12 is_stmt 0 discriminator 13 view .LVU362
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1284              	.L88:
  748:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     }
  1285              		.loc 1 748 19 view .LVU376
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 68
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 68
 
 
  1286 00b6 BA46     		mov	r10, r7
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1323              		.loc 1 794 14 is_stmt 0 view .LVU393
  1324 00da B4F85E30 		ldrh	r3, [r4, #94]
  1325 00de 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 69
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 69
 
 
  794:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****       }
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1364 010e 12F0200F 		tst	r2, #32
  1365 0112 E9D0     		beq	.L78
  782:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****         {
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 70
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 70
 
 
  1366              		.loc 1 782 9 is_stmt 1 view .LVU410
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1403 013c 0320     		movs	r0, #3
  1404 013e 0CE0     		b	.L67
  1405              	.L95:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 71
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 71
 
 
  810:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     /* At end of Rx process, restore huart->RxState to Ready */
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1448              		.fpu fpv4-sp-d16
  1450              	HAL_UARTEx_ReceiveToIdle_IT:
  1451              	.LVL109:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 72
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 72
 
 
  1452              	.LFB342:
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1491 001a 0367     		str	r3, [r0, #112]
  852:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  1492              		.loc 1 852 5 is_stmt 1 view .LVU456
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 73
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 73
 
 
  852:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1532              	.LVL116:
 1156:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  1533              		.loc 2 1156 4 discriminator 1 view .LVU472
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 74
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 74
 
 
 1156:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1578              	.LVL120:
  874:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c **** 
  1579              		.loc 1 874 1 view .LVU485
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 75
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 75
 
 
  1580 0048 7047     		bx	lr
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1626 000c F1B1     		cbz	r1, .L117
  900:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****     {
  1627              		.loc 1 900 25 discriminator 1 view .LVU496
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 76
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 76
 
 
  1628 000e 0AB9     		cbnz	r2, .L124
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1666              	.L125:
  916:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c ****         ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
  1667              		.loc 1 916 9 is_stmt 1 view .LVU513
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 77
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 77
 
 
  1668 002e 2368     		ldr	r3, [r4]
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1708 003e 42E80031 		strex r1, r3, [r2]
  1709              	@ 0 "" 2
  1710              	.LVL132:
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 78
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 78
 
 
  1711              		.loc 2 1207 4 discriminator 1 view .LVU528
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1760              		.cfi_startproc
  1761              		@ args = 0, pretend = 0, frame = 0
  1762              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 79
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 79
 
 
  1763              		@ link register save eliminated.
@@ -4716,52 +4716,52 @@ ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 1
  1795              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
  1796              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h"
  1797              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
-ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s 			page 80
+ARM GAS  C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s 			page 80
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g4xx_hal_uart_ex.c
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:18     .text.UARTEx_Wakeup_AddressConfig:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:25     .text.UARTEx_Wakeup_AddressConfig:00000000 UARTEx_Wakeup_AddressConfig
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:65     .text.UARTEx_SetNbDataToProcess:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:71     .text.UARTEx_SetNbDataToProcess:00000000 UARTEx_SetNbDataToProcess
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:157    .text.UARTEx_SetNbDataToProcess:00000044 $d
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:163    .text.HAL_RS485Ex_Init:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:170    .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:308    .text.HAL_UARTEx_WakeupCallback:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:315    .text.HAL_UARTEx_WakeupCallback:00000000 HAL_UARTEx_WakeupCallback
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:330    .text.HAL_UARTEx_RxFifoFullCallback:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:337    .text.HAL_UARTEx_RxFifoFullCallback:00000000 HAL_UARTEx_RxFifoFullCallback
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:352    .text.HAL_UARTEx_TxFifoEmptyCallback:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:359    .text.HAL_UARTEx_TxFifoEmptyCallback:00000000 HAL_UARTEx_TxFifoEmptyCallback
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:374    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:381    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:445    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:452    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 HAL_UARTEx_StopModeWakeUpSourceConfig
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:577    .text.HAL_UARTEx_EnableStopMode:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:584    .text.HAL_UARTEx_EnableStopMode:00000000 HAL_UARTEx_EnableStopMode
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:677    .text.HAL_UARTEx_DisableStopMode:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:684    .text.HAL_UARTEx_DisableStopMode:00000000 HAL_UARTEx_DisableStopMode
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:776    .text.HAL_UARTEx_EnableFifoMode:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:783    .text.HAL_UARTEx_EnableFifoMode:00000000 HAL_UARTEx_EnableFifoMode
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:862    .text.HAL_UARTEx_DisableFifoMode:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:869    .text.HAL_UARTEx_DisableFifoMode:00000000 HAL_UARTEx_DisableFifoMode
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:940    .text.HAL_UARTEx_SetTxFifoThreshold:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:947    .text.HAL_UARTEx_SetTxFifoThreshold:00000000 HAL_UARTEx_SetTxFifoThreshold
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1028   .text.HAL_UARTEx_SetRxFifoThreshold:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1035   .text.HAL_UARTEx_SetRxFifoThreshold:00000000 HAL_UARTEx_SetRxFifoThreshold
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1116   .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1123   .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1443   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1450   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1596   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1603   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1749   .text.HAL_UARTEx_GetRxEventType:00000000 $t
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1756   .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1774   .rodata.denominator.0:00000000 $d
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1778   .rodata.denominator.0:00000000 denominator.0
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1781   .rodata.numerator.1:00000000 $d
-C:\Users\LDegr\AppData\Local\Temp\ccOvwyMy.s:1785   .rodata.numerator.1:00000000 numerator.1
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:18     .text.UARTEx_Wakeup_AddressConfig:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:25     .text.UARTEx_Wakeup_AddressConfig:00000000 UARTEx_Wakeup_AddressConfig
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:65     .text.UARTEx_SetNbDataToProcess:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:71     .text.UARTEx_SetNbDataToProcess:00000000 UARTEx_SetNbDataToProcess
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:157    .text.UARTEx_SetNbDataToProcess:00000044 $d
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:163    .text.HAL_RS485Ex_Init:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:170    .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:308    .text.HAL_UARTEx_WakeupCallback:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:315    .text.HAL_UARTEx_WakeupCallback:00000000 HAL_UARTEx_WakeupCallback
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:330    .text.HAL_UARTEx_RxFifoFullCallback:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:337    .text.HAL_UARTEx_RxFifoFullCallback:00000000 HAL_UARTEx_RxFifoFullCallback
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:352    .text.HAL_UARTEx_TxFifoEmptyCallback:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:359    .text.HAL_UARTEx_TxFifoEmptyCallback:00000000 HAL_UARTEx_TxFifoEmptyCallback
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:374    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:381    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:445    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:452    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 HAL_UARTEx_StopModeWakeUpSourceConfig
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:577    .text.HAL_UARTEx_EnableStopMode:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:584    .text.HAL_UARTEx_EnableStopMode:00000000 HAL_UARTEx_EnableStopMode
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:677    .text.HAL_UARTEx_DisableStopMode:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:684    .text.HAL_UARTEx_DisableStopMode:00000000 HAL_UARTEx_DisableStopMode
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:776    .text.HAL_UARTEx_EnableFifoMode:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:783    .text.HAL_UARTEx_EnableFifoMode:00000000 HAL_UARTEx_EnableFifoMode
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:862    .text.HAL_UARTEx_DisableFifoMode:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:869    .text.HAL_UARTEx_DisableFifoMode:00000000 HAL_UARTEx_DisableFifoMode
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:940    .text.HAL_UARTEx_SetTxFifoThreshold:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:947    .text.HAL_UARTEx_SetTxFifoThreshold:00000000 HAL_UARTEx_SetTxFifoThreshold
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1028   .text.HAL_UARTEx_SetRxFifoThreshold:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1035   .text.HAL_UARTEx_SetRxFifoThreshold:00000000 HAL_UARTEx_SetRxFifoThreshold
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1116   .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1123   .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1443   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1450   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1596   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1603   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1749   .text.HAL_UARTEx_GetRxEventType:00000000 $t
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1756   .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1774   .rodata.denominator.0:00000000 $d
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1778   .rodata.denominator.0:00000000 denominator.0
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1781   .rodata.numerator.1:00000000 $d
+C:\Users\LDegr\AppData\Local\Temp\ccDNFok2.s:1785   .rodata.numerator.1:00000000 numerator.1
 
 UNDEFINED SYMBOLS
 UART_SetConfig

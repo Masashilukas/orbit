@@ -126,6 +126,8 @@ void MOTOR_SVPWMtask(motor_t* m)
   	HAL_ADC_PollForConversion(m->adc, 100);
   	m->iwDat = ((((3.3f *(double) HAL_ADC_GetValue(m->adc))/ 4096.0f) * 9200.0f) / 6800.0f);
   	HAL_ADC_Stop(m->adc);
+
+	
     HAL_GPIO_WritePin(m->enablePins[0].gpioGroup, m->enablePins[0].gpioPin, 1);
     HAL_GPIO_WritePin(m->enablePins[1].gpioGroup, m->enablePins[1].gpioPin, 1);
     HAL_GPIO_WritePin(m->enablePins[2].gpioGroup, m->enablePins[2].gpioPin, 1);
@@ -217,7 +219,7 @@ void MOTOR_task(motor_t* m)
             m->pwm->Instance->CCR1 = round(255 * m->dutyCycle); // pwmu = dutycycle
 			m->pwm->Instance->CCR2 = 0; // pwmv = 0
         }
-    else {
+    	else {
      	   _drive_wu(m);  // pwmu = dutycycle
      	   m->pwm->Instance->CCR1 = round(255 * m->dutyCycle); // pwmw = dutycycle
      	   m->pwm->Instance->CCR3 = 0; // pwmu = 0

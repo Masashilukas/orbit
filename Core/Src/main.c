@@ -22,22 +22,25 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "motor.h"
+#include "stm32g4xx.h"
+#include "stm32g431xx.h"
+#include "stm32g4xx_hal.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define TIMCLOCK   16000000
-#define PRESCALAR  16
+#define ADC_BUF_LENGTH 4096
+#define TIMCLOCK   150000000
+#define PRESCALAR  150
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -50,14 +53,15 @@ SPI_HandleTypeDef hspi2;
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim8;
+TIM_HandleTypeDef htim17;
 
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-uint16_t adcValue[3];
-uint16_t adcJoyX;
-uint16_t adcJoyY;
-
+uint16_t adc1Buf[3];
+uint16_t adc2Buf[2];
+uint8_t adcDataReady;
+uint8_t uartDataReady;
 uint32_t tim1Val1 = 0;
 uint32_t tim1Val2 = 0;
 uint32_t Difference1 = 0;
@@ -74,29 +78,42 @@ uint32_t Difference3 = 0;
 int isFirstCap3 = 0;
 float frequency3 = 0;
 float combinedSpeed;
+float lastSpeedErr;
 
+double angle;
 motor_t motor;
-uint8_t isDA[] = {0xDA, 0XBA, 0xD0, 0x00};
-uint8_t retDA[] = {0x00, 0xD0, 0xBA, 0xDA};
 gpio_Pin Hall_1 = { .gpioGroup = GPIOA, .gpioPin = GPIO_PIN_3 };        //TIM2 CH4
 gpio_Pin Hall_2 = { .gpioGroup = GPIOB, .gpioPin = GPIO_PIN_3 };        //TIM2 CH2
 gpio_Pin Hall_3 = { .gpioGroup = GPIOA, .gpioPin = GPIO_PIN_15 };       //TIM2 CH1
-
-gpio_Pin motor_Sleep = { .gpioGroup = GPIOB, .gpioPin = GPIO_PIN_7 };	//SLEEP
-
-
+gpio_Pin fault = { .gpioGroup = GPIOA, .gpioPin = GPIO_PIN_12 };	//FAULT
 gpio_Pin txen = { .gpioGroup = GPIOB, .gpioPin = GPIO_PIN_1 };            //txen
-
 gpio_Pin imuInt = { .gpioGroup = GPIOB, .gpioPin = GPIO_PIN_2 };
-gpio_Pin imuCS= { .gpioGroup = GPIOA, .gpioPin = GPIO_PIN_11 };
-
+gpio_Pin imuCS = { .gpioGroup = GPIOA, .gpioPin = GPIO_PIN_11 };
+double newAngle;
+bool doDMArx;
 gpio_Pin ena = { .gpioGroup = GPIOC, .gpioPin = GPIO_PIN_10 };            //motor ENA
 gpio_Pin enb = { .gpioGroup = GPIOC, .gpioPin = GPIO_PIN_11 };            //motor ENB
 gpio_Pin enc = { .gpioGroup = GPIOB, .gpioPin = GPIO_PIN_6 };            //motor ENC
-
-gpio_Pin fault = { .gpioGroup = GPIOA, .gpioPin = GPIO_PIN_12 };          //motor fault
-
+gpio_Pin motor_Sleep = { .gpioGroup = GPIOB, .gpioPin = GPIO_PIN_7 };          //motor SLEEP
 gpio_Pin proxi = { .gpioGroup = GPIOB, .gpioPin = GPIO_PIN_12 };         //proxy
+uint8_t rx_buff[5];
+uint8_t isDA[] = {0xDA, 0XBA, 0xD0, 0x00};
+uint8_t retDA[] = {0x00, 0xD0, 0xBA, 0xDA};
+
+int address[8] = {0,1, 1, 0, 1, 1, 0, 0};
+int startState;
+int nextState;
+uint32_t timVal1 = 0;
+uint32_t timVal2 = 0;
+uint32_t Difference = 0;
+int isFirstCap = 0;
+float frequency = 0;
+uint8_t lastHallState;
+int hallCount;
+int revolutions;
+int timerCount;
+int toggleState;
+uint32_t node = 0x69;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -110,177 +127,167 @@ static void MX_TIM2_Init(void);
 static void MX_TIM8_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_SPI2_Init(void);
+static void MX_TIM17_Init(void);
 /* USER CODE BEGIN PFP */
-
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim);
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc);
+void RGB_Init(void);
 void RGB_setIntensity(uint8_t red, uint8_t green, uint8_t blue);
-void readAccel(void);
-void readJoy(uint16_t  *xVal, uint16_t * yVal);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc){
-
-	//_adcHandler(&motor);
-	HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcValue, 3);
-	return;
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+    if(1){  // RX is complete
+        // SYNC
+        if(rx_buff[0] == isDA[0] && rx_buff[1] == isDA[1] && rx_buff[2] == isDA[2] && rx_buff[3] == isDA[3]){
+        	RGB_setIntensity(186, 26, 133); //186, 26, 133
+        	HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 1); // setting txen high
+        	HAL_UART_Transmit(&huart3, retDA, 4, 100);
+        	HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 0); // setting txen low
+        }
+    }
 }
-void readJoy(uint16_t  *xVal, uint16_t * yVal){
-	ADC_ChannelConfTypeDef sConfig = {0};
-
-	sConfig.Channel = ADC_CHANNEL_4;
-	sConfig.Rank = ADC_REGULAR_RANK_2;
-	if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
-	{
-		Error_Handler();
-	}
-	HAL_ADC_Start(&hadc2);
-	HAL_ADC_PollForConversion(&hadc2, 100);
-	*xVal = HAL_ADC_GetValue(&hadc2);
-	HAL_ADC_Stop(&hadc2);
-
-
-	sConfig.Channel = ADC_CHANNEL_4;
-	sConfig.Rank = ADC_REGULAR_RANK_2;
-	if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
-	{
-		Error_Handler();
-	}
-	HAL_ADC_Start(&hadc2);
-	HAL_ADC_PollForConversion(&hadc2, 100);
-	*yVal = HAL_ADC_GetValue(&hadc2);
-	HAL_ADC_Stop(&hadc2);
-
-	return;
-}
-
 void readAccel(void){
-
-
-
-	return;
+	int buffer[8];
+	int rxBuffer[8];
+	buffer[0] = 1; // read mode
+	HAL_GPIO_WritePin(imuCS.gpioGroup, imuCS.gpioPin, 0); // setting CS LOW
+	for(int i = 1; i < 8; i++){
+		buffer[i] = address[i-1];
+	}
+	HAL_SPI_Transmit(&hspi1, &buffer, 1, 100);
+	HAL_SPI_Receive(&hspi1, rxBuffer, 1, 100);
+	HAL_GPIO_WritePin(imuCS.gpioGroup, imuCS.gpioPin, 1);// setting CS HIGH
+}
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc){
+  _adcHandler(&motor);
+  //start again
+  //HAL_ADC_Start_DMA(motor.adc, (uint32_t *) motor.adcData, 3);
+  return;
+}
+void goTo(int steps){
+	int timeSteps;
+	int lastStep;
+	motor.hallCount = 0;
+	HAL_GPIO_WritePin(motor_Sleep.gpioGroup, motor_Sleep.gpioPin, 1);
+	HAL_TIM_Base_Start(&htim17);
+	while(motor.hallCount < steps){
+		readHalls(&motor);
+		timeSteps = __HAL_TIM_GET_COUNTER(&htim17);
+		MOTOR_SVPWMtask(&motor);
+		motor.speed =(double) (motor.hallCount)/(timeSteps - lastStep);
+		lastStep = timeSteps;
+		if(motor.hallspeed > 20.0f){
+			motor.dutyCycle -= 0.0001;
+		}
+	}
+	HAL_TIM_Base_Stop(&htim17);
+	HAL_GPIO_WritePin(motor_Sleep.gpioGroup, motor_Sleep.gpioPin, 0);
+}
+void RGB_Init(void){
+  // initiate all pins for RGB LED
+  HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_3);
 }
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
-	if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
+	if (HAL_TIM_GetActiveChannel(htim) == HAL_TIM_ACTIVE_CHANNEL_1)
 	{
+		motor.hallCount++;
 		if (isFirstCap1==0) // if the first rising edge is not captured
 			{
 			tim1Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1); // read the first value
 			isFirstCap1 = 1;  // set the first captured as true
 			}
-
 		else   // If the first rising edge is captured, now we will capture the second edge
 		{
 			tim1Val2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);  // read second value
-
 			if (tim1Val2 > tim1Val1)
 			{
 				Difference1 = tim1Val2-tim1Val1;
 			}
-
 			else if (tim1Val1 > tim1Val2)
 				{
 					Difference1 = (0xffffffff - tim1Val1) + tim1Val2;
 				}
-
 			float refClock = TIMCLOCK/(PRESCALAR);
 			frequency1 = refClock/Difference1;
-
 			__HAL_TIM_SET_COUNTER(htim, 0);  // reset the counter
 			isFirstCap1 = 0; // set it back to false
+			motor.hallspeed = (frequency1);
 		}
-
 	}
-	if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
+	if (HAL_TIM_GetActiveChannel(htim) == HAL_TIM_ACTIVE_CHANNEL_2)
+		{
+			motor.hallCount++;
+		}
+	if (HAL_TIM_GetActiveChannel(htim) == HAL_TIM_ACTIVE_CHANNEL_4)
+		{
+			motor.hallCount++;
+		}
+	int timeSteps;
+	HAL_TIM_Base_Stop(&htim17);
+	timeSteps = __HAL_TIM_GET_COUNTER(&htim17);
+	float refClock = TIMCLOCK/(PRESCALAR);
+	motor.speed = (60.0f * 3.14159 / 180.0f )*((double)refClock/timeSteps);
+	htim17.Instance->CNT = 0;
+	HAL_TIM_Base_Start(&htim17);
+/**
+	if (HAL_TIM_GetActiveChannel(htim) == HAL_TIM_ACTIVE_CHANNEL_2)
 	{
 		if (isFirstCap2==0) // if the first rising edge is not captured
 			{
 			tim2Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_2); // read the first value
 			isFirstCap2 = 1;  // set the first captured as true
 			}
-
 		else   // If the first rising edge is captured, now we will capture the second edge
 		{
 			tim2Val2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_2);  // read second value
-
 			if (tim2Val2 > tim2Val1)
 			{
 				Difference2 = tim2Val2-tim2Val1;
 			}
-
 			else if (tim2Val1 > tim2Val2)
 				{
 					Difference2 = (0xffffffff - tim2Val1) + tim2Val2;
 				}
-
 			float refClock = TIMCLOCK/(PRESCALAR);
 			frequency2 = refClock/Difference2;
-
 			__HAL_TIM_SET_COUNTER(htim, 0);  // reset the counter
 			isFirstCap2 = 0; // set it back to false
+			motor.hallspeed = (frequency2 / 2);
 		}
-
 	}
-	if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3)
+	if (HAL_TIM_GetActiveChannel(htim) == HAL_TIM_ACTIVE_CHANNEL_4)
 	{
 		if (isFirstCap3==0) // if the first rising edge is not captured
 			{
-			tim3Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_3); // read the first value
+			tim3Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_4); // read the first value
 			isFirstCap3 = 1;  // set the first captured as true
 			}
-
 		else   // If the first rising edge is captured, now we will capture the second edge
 		{
-			tim3Val2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_3);  // read second value
-
+			tim3Val2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_4);  // read second value
 			if (tim3Val2 > tim3Val1)
 			{
 				Difference3 = tim3Val2-tim3Val1;
 			}
-
-			else if (tim3Val1 > tim3Val2)
+3:59
+else if (tim3Val1 > tim3Val2)
 				{
 					Difference3 = (0xffffffff - tim3Val1) + tim3Val2;
 				}
-
 			float refClock = TIMCLOCK/(PRESCALAR);
 			frequency3 = refClock/Difference3;
-
 			__HAL_TIM_SET_COUNTER(htim, 0);  // reset the counter
 			isFirstCap3 = 0; // set it back to false
+			motor.hallspeed = (frequency3 / 2);
 		}
-
 	}
-
-	//Speed Calculation
-	switch(motor.hallState){
-    	case 0b100:
-    		combinedSpeed = ((frequency2 + frequency3) / 2);
-    		break;
-    	case 0b110:
-    		combinedSpeed = frequency3;
-    		break;
-    	case 0b010:
-    		combinedSpeed = ((frequency1 + frequency3) / 2);
-    		break;
-    	case 0b011:
-    		combinedSpeed = frequency1;
-    		break;
-    	case 0b001:
-    		combinedSpeed = ((frequency1 + frequency2) / 2);
-    		break;
-    	case 0b101:
-    		combinedSpeed = frequency2;
-    		break;
-	}
+**/
 	return;
 }
-
-
 void RGB_setIntensity(uint8_t red, uint8_t green, uint8_t blue){
   if(red > 255){
     red = 255;
@@ -304,8 +311,6 @@ void RGB_setIntensity(uint8_t red, uint8_t green, uint8_t blue){
   htim8.Instance->CCR2 = green;
   htim8.Instance->CCR3 = blue;
 }
-
-
 /* USER CODE END 0 */
 
 /**
@@ -316,7 +321,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -325,14 +329,12 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -345,30 +347,18 @@ int main(void)
   MX_TIM8_Init();
   MX_USART3_UART_Init();
   MX_SPI2_Init();
+  MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
-
-
-  //joystick code
-  //HAL_ADC_Start_IT(&hadc2);
-
- /**
-  //input
-  if( HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1) != HAL_OK){
-	  Error_Handler();
-  }
-  if( HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2) != HAL_OK){
-	  Error_Handler();
-  }
-
-  if( HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_4) != HAL_OK){
-	  Error_Handler();
-  }
-**/
+  // Set up joystick
+  //input capture
+  //HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1);
+  //HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2);
+  //HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_4);
   // set up motor struct
   motor.pwm = &htim1;
   motor.adc = &hadc1;
+  motor.encoder = &hspi2;
   // Enable pins
-
   motor.enablePins[0] = ena;
   motor.enablePins[1] = enb;
   motor.enablePins[2] = enc;
@@ -376,12 +366,29 @@ int main(void)
   motor.hallPins[0] = Hall_1;
   motor.hallPins[1] = Hall_2;
   motor.hallPins[2] = Hall_3;
+  motor.dutyCycle = 0.3;
   motor.dir = 1;        // make go forward
-  motor.dutyCycle = 0.2;
+  HAL_GPIO_WritePin(motor_Sleep.gpioGroup, motor_Sleep.gpioPin, 1);
   MOTOR_init(&motor);
-  HAL_GPIO_WritePin(motor_Sleep.gpioGroup, motor_Sleep.gpioPin, 1); // turn motor on
-
-  uint8_t dataSend = 0b11001000;
+  if( HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1) != HAL_OK){
+  	  Error_Handler();
+  }
+  if( HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2) != HAL_OK){
+	  Error_Handler();
+  }
+  if( HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_4) != HAL_OK){
+  	  Error_Handler();
+  }
+  toggleState = 0;
+//
+  //VIC_Serial_Init(node, &huart3, txen.gpioGroup,  txen.gpioPin, true, &hdma_usart3_rx);
+  //uint16_t angle;
+  //HAL_ADC_Start_DMA(motor.adc, &motor.adcData, 3); // start ADC DMA
+  double kp = 0.0000003;
+  double kd = 0.0008;
+  double lastDuty = 0;
+  double speedErr = 0;
+	//goTo(5000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -391,22 +398,52 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  //readJoy(&adcJoyX, &adcJoyY);
-	  readHalls(&motor);
-	  //HAL_GPIO_WritePin(motor_Sleep.gpioGroup, motor_Sleep.gpioPin, 1); // turn motor on
-	  //HAL_GPIO_WritePin(ena.gpioGroup, ena.gpioPin, 1); // turn motor on
-	  //HAL_GPIO_WritePin(enb.gpioGroup, enb.gpioPin, 0); // turn motor on
-	  //HAL_GPIO_WritePin(enc.gpioGroup, enc.gpioPin, 0); // turn motor on
-	  //MOTOR_FOCtask(&motor);
-    MOTOR_SVPWMtask(&motor);
-	  //MOTOR_task(&motor);
-	  //HAL_Delay(1);
-
-	  //HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 1); // setting txen highW
-	  //HAL_UART_Transmit(&huart3, isDA, 4, 100);
-	  //HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 0); // setting txen low
-	  //HAL_Delay(1);
-
+	    //RGB_setIntensity(0, 255, 191);
+	    readHalls(&motor);
+	    /**
+	    if(motor.hallState != motor.lastHallState){
+	  	  if(motor.hallState == 0b100){
+	  		  if(toggleState == 1){
+	  			  HAL_TIM_Base_Stop(&htim17);
+	  			  hallCount = __HAL_TIM_GET_COUNTER(&htim17);
+	  			  htim17.Instance->CNT = 0;
+	  			  toggleState = 0;
+	  			  float refClock = TIMCLOCK/(PRESCALAR);
+	  			  motor.stateSpeed = 1.0f /(refClock/hallCount);
+	  		  }
+	  		  else{
+		  		  revolutions++;
+		  		  HAL_TIM_Base_Start(&htim17);
+		  		  toggleState = 1;
+	  		  }
+	  	  }
+	    }
+	    **/
+	    //motor.angle = motor.angle + (double)(htim17.Instance->CNT / 255);
+	    /**
+	  motor.lastHallState = motor.hallState;
+    **/
+	  speedErr = (double)(100.0f - motor.hallspeed);
+	  motor.dutyCycle = motor.dutyCycle + (double)(kp *speedErr) + (double)(kd * (speedErr - lastSpeedErr));
+		if(motor.dutyCycle > 0.4){
+			motor.dutyCycle = 0.4f;
+		}
+		else if(motor.dutyCycle < 0.005f){
+			motor.dutyCycle = 0.005f;
+		}
+		
+	    //angle  = readEncoder(&motor);
+	    //Command_Task();
+	    //HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 1); // setting txen high
+	    //HAL_UART_Transmit(&huart3, isDA, 4, 100);
+	    //HAL_GPIO_WritePin(txen.gpioGroup, txen.gpioPin, 0); // setting txen low
+	    //HAL_Delay(1);
+	    MOTOR_SVPWMtask(&motor);
+	    //MOTOR_task(&motor); // spins motor continu` ously
+	    //MOTOR_FOCtask(&motor);
+	    //readAccel();
+	    lastSpeedErr = speedErr;
+		lastDuty = motor.dutyCycle;
   }
   /* USER CODE END 3 */
 }
@@ -913,6 +950,38 @@ static void MX_TIM8_Init(void)
 
   /* USER CODE END TIM8_Init 2 */
   HAL_TIM_MspPostInit(&htim8);
+
+}
+
+/**
+  * @brief TIM17 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM17_Init(void)
+{
+
+  /* USER CODE BEGIN TIM17_Init 0 */
+
+  /* USER CODE END TIM17_Init 0 */
+
+  /* USER CODE BEGIN TIM17_Init 1 */
+
+  /* USER CODE END TIM17_Init 1 */
+  htim17.Instance = TIM17;
+  htim17.Init.Prescaler = 150;
+  htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim17.Init.Period = 65535;
+  htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim17.Init.RepetitionCounter = 0;
+  htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim17) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM17_Init 2 */
+
+  /* USER CODE END TIM17_Init 2 */
 
 }
 
